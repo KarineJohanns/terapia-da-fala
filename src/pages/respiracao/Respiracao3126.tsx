@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 
-const ExercicioRespiracao: React.FC = () => {
+const Respiracao3126: React.FC = () => {
     const [fase, setFase] = useState<string>("Inalar");
     const [contador, setContador] = useState<number>(3);
     const [repeticoes, setRepeticoes] = useState<number>(1);
@@ -117,9 +117,9 @@ const ExercicioRespiracao: React.FC = () => {
 
     return (
         <div
-            className="flex flex-col items-center justify-between min-h-screen bg-gradient-to-b from-blue-100 to-green-200 p-4">
-            <div className="flex flex-col items-center mb-4 text-purple-700">
-                <h2 className="text-4xl font-bold mb-6 text-purple-700 text-center">Exercício de Respiração</h2>
+            className="flex flex-col items-center justify-between min-h-screen p-4">
+            <div className="flex flex-col items-center mb-4 text-gray-700">
+                <h2 className="text-4xl font-bold mb-6 text-gray-700 text-center">Exercício de Respiração</h2>
                 <div className="flex items-center mb-2">
                     <label htmlFor="reps" className="text-xl mr-2">
                         Número de repetições:
@@ -130,7 +130,7 @@ const ExercicioRespiracao: React.FC = () => {
                         min="1"
                         value={repeticoes}
                         onChange={handleMudancaReps}
-                        className="border border-white p-1 rounded-md shadow-sm w-20 text-center text-black"
+                        className="border border-gray-700 p-1 rounded-md shadow-sm w-20 text-center text-black"
                     />
                 </div>
                 <div className="text-lg text-center">
@@ -140,7 +140,7 @@ const ExercicioRespiracao: React.FC = () => {
 
             <div className="flex flex-col items-center mt-8 w-full">
                 <div
-                    className={`w-40 h-40 bg-yellow-500 rounded-full shadow-lg flex items-center justify-center transition-transform duration-500 ease-in-out`}
+                    className={`w-40 h-40 bg-blue-200 rounded-full shadow-lg flex items-center justify-center transition-transform duration-500 ease-in-out`}
                     onClick={iniciarExercicio}
                     style={{
                         cursor: 'pointer',
@@ -151,15 +151,15 @@ const ExercicioRespiracao: React.FC = () => {
                 >
                     {!iniciado ? (
                         <div className="flex flex-col items-center">
-                            <span className="material-icons text-purple-700" style={{fontSize: '48px'}}>play_arrow</span>
-                            <p className="text-xl text-purple-700">Iniciar</p>
+                            <span className="material-icons text-blue-700" style={{fontSize: '48px'}}>play_arrow</span>
+                            <p className="text-xl text-blue-700 font-bold">Iniciar</p>
                         </div>
                     ) : (
                         <div className="flex flex-col items-center">
                             {repsCompletas < repeticoes ? (
                                 <>
-                                    <h3 className="text-2xl font-bold text-purple-700">{fase}</h3>
-                                    <p className="text-xl text-purple-700">{contador} segundos</p>
+                                    <h3 className="text-2xl font-bold text-blue-700">{fase}</h3>
+                                    <p className="text-xl text-blue-700">{contador} segundos</p>
                                 </>
                             ) : (
                                 <></>
@@ -171,8 +171,8 @@ const ExercicioRespiracao: React.FC = () => {
                             onClick={repetirExercicio}
                             className="flex flex-col items-center cursor-pointer absolute bottom-10 left-1/2 transform -translate-x-1/2"
                         >
-                            <span className="material-icons text-purple-700" style={{fontSize: '48px'}}>replay</span>
-                            <p className="text-xl text-purple-700">Repetir</p>
+                            <span className="material-icons text-blue-700" style={{fontSize: '48px'}}>replay</span>
+                            <p className="text-xl text-blue-700">Repetir</p>
                         </div>
                     )}
                 </div>
@@ -180,13 +180,13 @@ const ExercicioRespiracao: React.FC = () => {
 
             <div className="mb-8 pb-10 flex justify-center space-x-6 w-full">
                 <div onClick={pausarExercicio} className="cursor-pointer">
-                    <span className="material-icons text-purple-700" style={{fontSize: '56px'}}>
+                    <span className="material-icons text-blue-700" style={{fontSize: '56px'}}>
                         {pausado ? 'play_arrow' : 'pause_circle'}
                     </span>
                 </div>
 
                 <div onClick={pararExercicio} className="cursor-pointer">
-                    <span className="material-icons text-purple-700" style={{fontSize: '56px'}}>stop_circle</span>
+                    <span className="material-icons text-blue-700" style={{fontSize: '56px'}}>stop_circle</span>
                 </div>
             </div>
 
@@ -199,4 +199,4 @@ const ExercicioRespiracao: React.FC = () => {
     );
 };
 
-export default ExercicioRespiracao;
+export default Respiracao3126;
