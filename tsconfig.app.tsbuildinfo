@@ -1,1 +1,1 @@
-{"root":["./src/app.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/components/exerciciorespiracao.tsx"],"version":"5.6.3"}
+{"root":["./src/app.tsx","./src/headlessui.d.ts","./src/main.tsx","./src/vite-env.d.ts","./src/components/menu.tsx","./src/components/silabacao.tsx","./src/pages/home.tsx","./src/pages/respiracao/respiracao3126.tsx","./src/pages/silabacao/bradragra.tsx","./src/pages/silabacao/pratracra.tsx"],"version":"5.6.3"}
